@@ -16,3 +16,6 @@ while True:
         while True:
             # Recibir el UID del cliente
             received_data = client_socket.recv(1024).decode()
+            if received_data:
+                print(f"ID recibido desde {client_address}: {received_data}")
+
