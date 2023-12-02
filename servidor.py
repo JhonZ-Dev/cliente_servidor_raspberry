@@ -12,4 +12,7 @@ print(f"Esperando conexiones en {host}:{port}...")
 while True:
     client_socket, client_address = server_socket.accept()
     print(f"Conexión establecida desde {client_address}")
-
+    try:
+        while True:
+            # Recibir el UID del cliente
+            received_data = client_socket.recv(1024).decode()
