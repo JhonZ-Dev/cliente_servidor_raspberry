@@ -14,3 +14,5 @@ server_address = 'ip_del_servidor'  # Reemplaza con la IP del servidor
 server_port = 12345
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((server_address, server_port))
+
+print(f"Conectado al servidor en {server_address}:{server_port}")
