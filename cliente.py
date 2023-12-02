@@ -18,3 +18,9 @@ client_socket.connect((server_address, server_port))
 print(f"Conectado al servidor en {server_address}:{server_port}")
 while True:
     uid = pn532.read_passive_target(timeout=0.5)
+    if uid is not None:
+        uid_str = ''.join([hex(i)[2:] for i in uid])
+        print("Tarjeta detectada con UID:", uid_str)
+
+        # Enviar el UID al servidor
+        client_socket.send(uid_str.encode())
