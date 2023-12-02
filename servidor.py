@@ -10,3 +10,6 @@ server_socket.listen(5)  # Permitir hasta 5 conexiones simultáneas
 print(f"Esperando conexiones en {host}:{port}...")
 
 while True:
+    client_socket, client_address = server_socket.accept()
+    print(f"Conexión establecida desde {client_address}")
+
