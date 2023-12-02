@@ -18,4 +18,6 @@ while True:
             received_data = client_socket.recv(1024).decode()
             if received_data:
                 print(f"ID recibido desde {client_address}: {received_data}")
-
+    except ConnectionResetError:
+        print(f"Conexión cerrada desde {client_address}")
+        client_socket.close()
