@@ -16,3 +16,5 @@ client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((server_address, server_port))
 
 print(f"Conectado al servidor en {server_address}:{server_port}")
+while True:
+    uid = pn532.read_passive_target(timeout=0.5)
