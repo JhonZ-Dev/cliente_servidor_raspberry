@@ -8,3 +8,5 @@ server_socket.listen(5)  # Permitir hasta 5 conexiones simultáneas
 
 
 print(f"Esperando conexiones en {host}:{port}...")
+
+while True:
