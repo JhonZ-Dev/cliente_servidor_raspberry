@@ -1,1 +1,1 @@
-# cliente_servidor_raspberry
+# Proyecto de un cliente y servidor usando raspberry con Python
